@@ -1,0 +1,29 @@
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Oo]bj/
+[Uu]ser[Ss]ettings/
+
+sysinfo.txt
+
+# IDE / editor junk
+*.csproj
+*.sln
+*.user
+*.pidb
+*.suo
+*.vsp
+*.unityproj
+*.userprefs
+
+# Generated build output
+*.apk
+*.aab
+*.ipa
+*.exe
+*.app
+*.xcworkspace/
+DerivedData/
