@@ -1,10 +1,12 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManagerMain : MonoBehaviour
 {
     public static GameManagerMain Instance;
     [SerializeField] private TextMeshProUGUI gameOverText;  
+    [SerializeField] private GameObject restartButton;
     public bool IsGameOver { get; private set; } = false;
 
     private void Awake()
@@ -21,6 +23,7 @@ public class GameManagerMain : MonoBehaviour
         IsGameOver = true;
 
         gameOverText?.gameObject.SetActive(true);
+        restartButton?.SetActive(true);
 
         PlayerController player = FindObjectOfType<PlayerController>();
         if (player != null)
@@ -29,5 +32,11 @@ public class GameManagerMain : MonoBehaviour
             Rigidbody2D prb = player.GetComponent<Rigidbody2D>();
             if (prb != null) prb.linearVelocity = Vector2.zero;
         }
+    }
+
+    public void RestartGame()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }
