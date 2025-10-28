@@ -3,8 +3,8 @@ using UnityEngine;
 public class CoinSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject coinPrefab;
-    [SerializeField] private Vector2 minPos = new Vector2(-5f, -5f);
-    [SerializeField] private Vector2 maxPos = new Vector2(5f, 5f);
+    [SerializeField] private Vector2 minPos = new Vector2(-7f, -3f);
+    [SerializeField] private Vector2 maxPos = new Vector2(7f, 3f);
     private GameObject currentCoin; 
 
     void Start()
